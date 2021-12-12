@@ -1,132 +1,172 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title> Hotel </title>
-		<link rel= "stylesheet" href = "../style.css"/>
-		<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script&family=Grey+Qo&family=Shalimar&display=swap" rel="stylesheet">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-		<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	</Head>
-	<body> 
-		<form action="">
-  <!--  General -->
-  <div class="form-group">
-    <h2 class="heading">Booking & contact</h2>
-    <div class="controls">
-      <input type="text" id="name" class="floatLabel" name="name">
-      <label for="name">Name</label>
-    </div>
-    <div class="controls">
-      <input type="text" id="email" class="floatLabel" name="email">
-      <label for="email">Email</label>
-    </div>       
-    <div class="controls">
-      <input type="tel" id="phone" class="floatLabel" name="phone">
-      <label for="phone">Phone</label>
-    </div>
-      <div class="grid">
-        <div class="col-2-3">
-          <div class="controls">
-           <input type="text" id="street" class="floatLabel" name="street">
-           <label for="street">Street</label>
-          </div>          
-        </div>
-        <div class="col-1-3">
-          <div class="controls">
-            <input type="number" id="street-number" class="floatLabel" name="street-number">
-            <label for="street-number">Number</label>
-          </div>          
-        </div>
-      </div>
-      <div class="grid">
-        <div class="col-2-3">
-          <div class="controls">
-            <input type="text" id="city" class="floatLabel" name="city">
-            <label for="city">City</label>
-          </div>         
-        </div>
-        <div class="col-1-3">
-          <div class="controls">
-            <input type="text" id="post-code" class="floatLabel" name="post-code">
-            <label for="post-code">Post Code</label>
-          </div>         
-        </div>
-      </div>
-      <div class="controls">
-        <input type="text" id="country" class="floatLabel" name="country">
-        <label for="country">Country</label>
-      </div>
-  </div>
-  <!--  Details -->
-  <div class="form-group">
-    <h2 class="heading">Details</h2>
-    <div class="grid">
-    <div class="col-1-4 col-1-4-sm">
-      <div class="controls">
-        <input type="date" id="arrive" class="floatLabel" name="arrive" value="<?php echo date('Y-m-d'); ?>">
-        <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Arrive</label>
-      </div>      
-    </div>
-    <div class="col-1-4 col-1-4-sm">
-      <div class="controls">
-        <input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>" />
-        <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Depart</label>
-      </div>      
-    </div>
-      </div>
-      <div class="grid">
-    <div class="col-1-3 col-1-3-sm">
-      <div class="controls">
-        <i class="fa fa-sort"></i>
-        <select class="floatLabel">
-          <option value="blank"></option>
-          <option value="1">1</option>
-          <option value="2" selected>2</option>
-          <option value="3">3</option>
-        </select>
-        <label for="fruit"><i class="fa fa-male"></i>&nbsp;&nbsp;People</label>
-      </div>      
-    </div>
-    <div class="col-1-3 col-1-3-sm">
-    <div class="controls">
-      <i class="fa fa-sort"></i>
-      <select class="floatLabel">
-        <option value="blank"></option>
-        <option value="deluxe" selected>With Bathroom</option>
-        <option value="Zuri-zimmer">Without Bathroom</option>
-      </select>
-      <label for="fruit">Room</label>
-     </div>     
-    </div>
+<head>
+	<title> Booking</title>
+	<meta charset = "utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script&family=Grey+Qo&family=Shalimar&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../jquery.validate.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/ui-lightness/jquery-ui.css">
+	<link rel= "stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel= "stylesheet" href = "../style.css">
+	
 
-    <div class="col-1-3 col-1-3-sm">
-    <div class="controls">
-      <i class="fa fa-sort"></i>
-      <select class="floatLabel">
-        <option value="blank"></option>
-        <option value="single-bed">Single bed</option>
-        <option value="double-bed" selected>Double bed</option>
-      </select>
-      <label for="fruit">Bedding</label>
-     </div>     
-    </div>
-      
-     </div>
-      <div class="grid">
-        <p class="info-text">Please describe your needs e.g. Extra beds, children's cots</p>
-        <br>
-        <div class="controls">
-          <textarea name="comments" class="floatLabel" id="comments"></textarea>
-          <label for="comments">Comments</label>
-          </div>
-            <button type="submit" value="Submit" class="col-1-4">Submit</button>
-      </div>  
-  </div> <!-- /.form-group -->
-</form>
-<style> {
-body:blue;
-}
- </style>
- </html>
+</head>
+
+<body>
+
+	<div class = "container-fluid">
+		<div class="row" id="header">
+			<div class="col-lg-12">
+				<div class="typewriter">
+					<h1 id="hotelName"> THE SLIEVE LEAGUE HOTEL </h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" id="nav">
+		<div class="col-lg-12 bg-transparent" >
+			<ul class="nav flex-row fixed top ">
+				<li class="nav-item">
+				</li>
+				<li class="nav-item">
+					<a  href="bookings/bookings.html" style="text-decoration:none">STAY</a>
+				</li>
+				<li class="nav-item">
+					<a  href="weddings/weddings.html" style="text-decoration:none">ABOUT</a>
+				</li>
+				<li class="nav-item">
+					<a href="restaurant/restaurant.html" style="text-decoration:none">DINE</a>
+				</li>
+				<li class="nav-item">
+					<a href="spa/spa.html"style="text-decoration:none">CONTACT</a>
+				</li>
+				<li class="nav-item">
+					<a href="gallery/gallery.html"style="text-decoration:none">GALLERY</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+			<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-interval="8000">
+				<div class="flex-fill"></div>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="../images/image4.jpg"style="height:50vh" class="d-block w-100">
+						<p>Double Room €200 per night</p>
+					</div>
+					<div class="carousel-item">
+						<img src="../images/image5.jpg" style="height:50vh" class="d-block w-100">
+						<p>Deluxe Room €300 per night</p>
+					</div>
+					<div class="carousel-item">
+						<img src="../images/image6.jpg"style="height:50vh"  class="d-block w-100">
+						<p>Superior Room €500 per night</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<form id="myForm" class="cmxform" method="post" target="_top">
+		<fieldset>
+			<p>
+				<label for="firstname"> Firstname: </label>
+				<input type="text" name="firstname" id="firstname" /><br/>
+			</p>
+			<p> 
+				<label for="lastname"> Lastname: </label>
+				<input type="text" name="lastname" id="lastname" /><br/>
+			</p>
+			<p> 
+				<label for="email"> Email: </label>
+				<input type="text" name="email" id="email" /><br/>
+			</p>
+			<p>
+				<label for="date"> Reservation Date: </label>
+				<input type="text" name="date" id="date" />
+			</p>
+
+			<p>
+				<label for="nights"> How many nights: </label>
+				<select name="nights" id="nights">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+				</select>
+			</p>
+
+			<p>
+				<label for="people"> How many people: </label>
+				<select name="people" id="people">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+				</select>
+			</p>
+
+			<p>
+				<label for="roomSize"> Room Size: </label>
+				<select name="roomSize" id="roomSize">
+					<option value="double">double</option>
+					<option value="superior">superior</option>
+					<option value="deluxe">deluxe</option>
+				</select>
+			</p>
+
+			<p>
+				<label for="rooms"> Rooms Required: </label>
+				<select name="rooms" id="rooms">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+				</select>
+			</p>
+
+			<p>
+				<button type="submit" name="submit" id="submit">Submit</button>
+			</p>
+		</fieldset>	
+	</form>
+
+			<div id="successMsg"></div>
+		<div class="container">
+			<div class="footer">
+				<span>&copyTheSlieveLeagueHotel</span>
+				<span class="footer-left"><i class="fa fa-phone" style="font-size:20px"></i><i>(00353)749135677</i></span>
+				<span class="footer-right"><i style="font-size:20px" class="fa">&#xf0e0;</i><i>info@SlieveLeagueHotel.ie</i></span>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../script.js"></script>
+
+
+</body>
+</html>
+
+
+
+
